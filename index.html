@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- Phần nội dung hiển thị của trang web -->
-    <h1 id="mylover">Chào Thầy!</h1>
+    <h1 id="mylover">Xin Chào!</h1>
     <!-- Tiêu đề h1 với nội dung ban đầu là "Xin chào!", sử dụng id "mylover" để có thể thay đổi nội dung bằng JavaScript -->
 
     <button style="background-color: blueviolet" onclick="displayResult()">
@@ -29,17 +29,33 @@
         // Mỗi khi hàm này được gọi, giá trị của `clickCount` sẽ tăng thêm 1 (tức là đếm số lần nhấn nút)
 
         if (clickCount === 1) {
-          document.getElementById("mylover").innerHTML = "Chúc thầy Lộc...!";
+          document.getElementById("mylover").innerHTML = "Dù cho thế giới này...";
           // Nếu clickCount bằng 1, nội dung của tiêu đề h1 sẽ được thay đổi thành "Chúc em thi tốt!"
         } else if (clickCount === 2) {
           document.getElementById("mylover").innerHTML =
-            "Em là người tuyệt vời!";
+            "Có vùi dập cậu...";
           // Nếu clickCount bằng 2, nội dung của tiêu đề h1 sẽ được thay đổi thành "Em là người tuyệt vời!"
         } else if (clickCount === 3) {
           document.getElementById("mylover").innerHTML =
-            "FUHO có một bữa tối...!";
-          // Nếu clickCount bằng 3, nội dung của tiêu đề h1 sẽ được thay đổi thành "Em là người tuyệt vời!"
-        } else {
+            "như thế nào đi chăng nữa!";
+        }
+          else if (clickCount === 4) {
+          document.getElementById("mylover").innerHTML =
+            "Thì...";
+        }
+            else if (clickCount === 5) {
+          document.getElementById("mylover").innerHTML =
+            "Khi cậu cố gắng...";
+        }
+              else if (clickCount === 6) {
+          document.getElementById("mylover").innerHTML =
+            "Cả vũ trụ này sẽ ủng hộ cậu";
+        }
+                else if (clickCount === 7) {
+          document.getElementById("mylover").innerHTML =
+            "Cố lên nhé!";
+        }
+        else {
           document.getElementById("mylover").innerHTML = "Xin chào!";
           // Nếu clickCount lớn hơn 2, nội dung của tiêu đề h1 sẽ quay về "Xin chào!"
           clickCount = 0;
