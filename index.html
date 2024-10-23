@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <!-- Khai báo loại tài liệu HTML và ngôn ngữ sử dụng là tiếng Việt -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Định nghĩa bộ mã ký tự là UTF-8 để hỗ trợ đầy đủ ký tự tiếng Việt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Đảm bảo trang web hiển thị tốt trên các thiết bị di động bằng cách sử dụng tỷ lệ viewport mặc định -->
+    <title>Tạo nút bấm</title>
+    <!-- Tiêu đề của trang web -->
+  </head>
+  <body>
+    <!-- Phần nội dung hiển thị của trang web -->
+    <h1 id="mylover">Chào Thầy!</h1>
+    <!-- Tiêu đề h1 với nội dung ban đầu là "Xin chào!", sử dụng id "mylover" để có thể thay đổi nội dung bằng JavaScript -->
+
+    <button style="background-color: blueviolet" onclick="displayResult()">
+      Bấm vào đây!
+    </button>
+    <!-- Tạo một nút bấm, màu nền của nút là màu xanh tím (blueviolet). 
+         Khi bấm vào nút, hàm JavaScript 'displayResult()' sẽ được gọi -->
+
+    <script>
+      let clickCount = 0;
+      <!-- Khai báo một biến `clickCount` để theo dõi số lần người dùng bấm vào nút. Ban đầu biến này có giá trị 0 -->
+
+      function displayResult() {
+        clickCount++;
+        // Mỗi khi hàm này được gọi, giá trị của `clickCount` sẽ tăng thêm 1 (tức là đếm số lần nhấn nút)
+
+        if (clickCount === 1) {
+          document.getElementById("mylover").innerHTML = "Chúc thầy Lộc...!";
+          // Nếu clickCount bằng 1, nội dung của tiêu đề h1 sẽ được thay đổi thành "Chúc em thi tốt!"
+        } else if (clickCount === 2) {
+          document.getElementById("mylover").innerHTML =
+            "Em là người tuyệt vời!";
+          // Nếu clickCount bằng 2, nội dung của tiêu đề h1 sẽ được thay đổi thành "Em là người tuyệt vời!"
+        } else if (clickCount === 3) {
+          document.getElementById("mylover").innerHTML =
+            "FUHO có một bữa tối...!";
+          // Nếu clickCount bằng 3, nội dung của tiêu đề h1 sẽ được thay đổi thành "Em là người tuyệt vời!"
+        } else {
+          document.getElementById("mylover").innerHTML = "Xin chào!";
+          // Nếu clickCount lớn hơn 2, nội dung của tiêu đề h1 sẽ quay về "Xin chào!"
+          clickCount = 0;
+          // Đặt lại giá trị của clickCount về 0 để có thể bắt đầu lại vòng lặp từ đầu
+        }
+      }
+    </script>
+    <!-- Đây là đoạn mã JavaScript, trong đó hàm `displayResult()` được định nghĩa để xử lý khi người dùng bấm nút -->
+  </body>
+</html>
